@@ -1,0 +1,15 @@
+name: Question
+description: Something unclear about using Whisplet.
+title: "[question] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Whisplet version, if relevant

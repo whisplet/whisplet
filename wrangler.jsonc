@@ -1,0 +1,17 @@
+// Static site on Cloudflare Workers static assets. Deployed by Workers Builds from this repository.
+// Custom domains are declared here so a deploy creates the DNS records for the apex and www.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "whisplet-site",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "whisplet.ai", "custom_domain": true },
+    { "pattern": "www.whisplet.ai", "custom_domain": true }
+  ]
+}

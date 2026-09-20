@@ -1,0 +1,25 @@
+name: Feature request
+description: Something Whisplet should do, or do differently.
+title: "[feature] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you are trying to do and where Whisplet gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: How you imagine it working. Alternatives welcome.
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often would this matter
+      options:
+        - Every meeting
+        - Weekly
+        - Occasionally

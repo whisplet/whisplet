@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in Whisplet misbehaves.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Whisplet version and build id
+      description: Both are shown in Settings.
+      placeholder: 0.1.0 (build 2026-10-01-abc123)
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Hardware tier
+      options:
+        - CPU only
+        - NVIDIA GPU
+        - Intel Arc or Intel iGPU
+        - AMD GPU
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 Pro 24H2
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What you did, in order.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What the app showed
+      description: Error text, screenshots, the crash report id if you sent one. No transcript text, please.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This report contains no transcript text and no personal data of other people.
+          required: true

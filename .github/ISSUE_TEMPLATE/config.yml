@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/whisplet/whisplet/discussions
+    about: Ask a question or propose an idea in Discussions.
+  - name: Security report
+    url: https://github.com/whisplet/whisplet/blob/main/SECURITY.md
+    about: Vulnerabilities go by mail, never into a public issue.
