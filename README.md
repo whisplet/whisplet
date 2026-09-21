@@ -15,7 +15,7 @@ The source lives in a private repository.
 ## Layout
 
 - `site/` static website, deployed by Cloudflare Workers Builds from this repository
-- `docs/` documentation (to come)
+- `docs/` documentation, live: start at `docs/README.md`
 - `.github/` issue forms
 
 ## License
