@@ -1,3 +1,4 @@
+/* whisplet.ai shared stylesheet */
 :root { color-scheme: light dark; --fg: #1b1b1f; --muted: #5c5f66; --bg: #fafafa; --line: #d9d9de; }
 @media (prefers-color-scheme: dark) { :root { --fg: #e8e8ec; --muted: #9a9ca3; --bg: #121215; --line: #2a2a30; } }
 html, body { margin: 0; background: var(--bg); color: var(--fg); font: 18px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
