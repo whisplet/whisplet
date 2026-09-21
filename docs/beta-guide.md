@@ -38,7 +38,9 @@ build handed to a small number of known testers.
    then click "Run anyway".
 4. Windows Defender may take a moment to scan the folder the first time you run it. This is
    normal for an unsigned build; let it finish.
-5. On first launch: [to confirm: what the app shows or asks for on its first run].
+5. On first launch, Whisplet writes a default settings file for itself and opens straight to
+   its idle screen, waiting for a meeting. There is no setup wizard and nothing to fill in
+   before you can use it.
 
 If Windows Defender flags the application as a threat rather than just warning about the
 unknown publisher, tell the maker; see "How to report a bug" below.
@@ -48,21 +50,25 @@ unknown publisher, tell the maker; see "How to report a bug" below.
 This is an outline. Exact menu names, buttons and hotkeys are not final in the beta and will
 be filled in.
 
-1. Start Whisplet. [to confirm: how you start it, for example a shortcut or the launcher file]
-2. Start a recording. [to confirm: button or hotkey]
+1. Start Whisplet by opening whisplet-ui.exe in the folder you unzipped it into.
+2. Join a supported meeting. Whisplet starts assistance by itself once it detects a supported
+   meeting application running; there is no separate start button or hotkey for this beta.
 3. Speak normally; Whisplet transcribes and labels speakers as the meeting happens.
 4. [to confirm: how notes are taken or edited during the meeting]
-5. End the recording. [to confirm: button or hotkey]
-6. Review the transcript, speaker labels and notes. [to confirm: where these appear after the
-   meeting]
+5. Click Finish to end the recording. Finish closes out the meeting and opens Review; the
+   meeting application itself keeps running.
+6. Review the transcript, speaker labels and notes in the Review window that Finish opens.
+   You can come back to any past meeting later from Saved Sessions.
 
 ## Where your data lives
 
 Recordings, transcripts, speaker labels and notes are created and kept in a folder on your
 computer, one you can open and delete yourself. Whisplet has no account system.
 
-- Default folder: [to confirm: default data folder path]
-- How to change it: [to confirm: setting or option, if any]
+- Default folder: %LOCALAPPDATA%\whisplet\sessions
+- How to change it: there is no setting for this in the beta; the location is fixed. You can
+  still choose what happens to old raw recordings (keep or delete) from Saved Sessions,
+  opened from the idle screen.
 
 ## What leaves the machine
 
@@ -111,17 +117,27 @@ The beta is a plain folder, not an installer.
 3. Delete your data folder (see "Where your data lives" above) if you want your recordings
    and notes removed as well; Whisplet does not delete this folder for you.
 
-There is no registry entry or background service to remove beyond this. [to confirm: any
-other files Whisplet writes outside these two folders, if any]
+There is no registry entry or background service to remove beyond this. Whisplet also writes
+a settings file and, if it ever crashes, crash reports, both under %LOCALAPPDATA%\whisplet
+alongside the sessions folder above. Deleting the whole %LOCALAPPDATA%\whisplet folder removes
+all of it.
 
 ## Known limitations
 
 This beta build has known rough edges. This list will be kept current during the beta.
 
-- [to confirm: languages or accents with weaker recognition]
-- [to confirm: known issues with speaker labels, for example overlapping speech]
-- [to confirm: features not yet implemented]
-- [to confirm: hardware or driver combinations known not to work]
+- The product runs either the Nemotron or the Whisper large-v3-turbo speech model. The maker
+  has tested English, Ukrainian, Russian and Spanish.
+- Speaker labels have not yet been checked with several speakers sharing one microphone; do
+  not rely on them in that setup.
+- Automatic start currently recognizes Zoom only; other meeting applications are not yet
+  supported in this beta.
+- Automatic deletion of old raw recordings is not implemented; use Saved Sessions to delete
+  them yourself once you no longer need them.
+- On Intel graphics (Arc or integrated), the Nemotron speech model runs and produces the same
+  text as elsewhere, but slower, and cleanup after a meeting has known problems. If you hit
+  trouble on Intel graphics, switch to the Whisper large-v3-turbo speech model in Settings,
+  under Models & Escalation.
 
 ## Terms and privacy
 
