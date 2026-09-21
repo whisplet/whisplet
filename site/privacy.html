@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy - Whisplet</title>
+<meta name="description" content="What Whisplet stores, what it sends, and for how long.">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main>
+  <nav><a href="/">Whisplet</a> <a href="/trust">What leaves your machine</a> <a href="/privacy">Privacy</a> <a href="/beta">Beta terms</a></nav>
+  <h1>Privacy</h1>
+  <p class="muted">Draft for the private beta. Updated 2026-09-20. Plain language; a lawyer reads it before the public launch.</p>
+
+  <h2>The application</h2>
+  <p>Recordings, transcripts, speaker labels and notes are created and kept on your computer, in a folder
+  you can open and delete. Whisplet has no account system and does not send meeting content anywhere.
+  Speech recognition and summarisation run locally; model files are downloaded once from
+  <code>dl.whisplet.ai</code> when you ask for them.</p>
+
+  <h2>Crash reports</h2>
+  <p>If the application crashes, the next start shows a dialog listing exactly which files it would send:
+  a minidump (stack traces and the list of loaded modules of the crashed process, never the audio or text
+  buffers), the last lines of the application log, and a short version and hardware summary. Nothing is
+  sent unless you click Send. Reports travel to <code>api.whisplet.ai</code>, are stored in the European
+  Union, and are deleted automatically after 90 days. We keep no IP address with a report. The report id
+  shown to you is the only handle; quote it when you write to support.</p>
+
+  <h2>Feedback and support</h2>
+  <p>Bug reports and questions go through GitHub issues, where GitHub's own terms apply, or by mail to
+  <code>support@whisplet.ai</code>, which forwards to the maker's mailbox. Please keep transcript text and
+  other people's personal data out of both.</p>
+
+  <h2>This website</h2>
+  <p>No cookies, no scripts, no analytics at the moment. If a cookie-less visitor counter is added later,
+  this page will say so first.</p>
+
+  <h2>Who</h2>
+  <p>Whisplet is made by Oleksandr Shyshkovtsov. Contact: <a href="mailto:hello@whisplet.ai">hello@whisplet.ai</a>.
+  A company entity will be named here before anything is sold.</p>
+  <footer>This page sets no cookies and loads no scripts.</footer>
+</main>
+</body>
+</html>
